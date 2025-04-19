@@ -70,6 +70,10 @@ public class Feature1RegistrationTest {
 	 */
 	@Test
     public void testSuccessfulRegistration() {
+		testSuccessfulRegistration(driver);
+	}
+
+	public static void testSuccessfulRegistration(WebDriver driver) {
 		String password = Utils.randomPassword(10,4);
 		String email = Utils.randomEmail();
 		

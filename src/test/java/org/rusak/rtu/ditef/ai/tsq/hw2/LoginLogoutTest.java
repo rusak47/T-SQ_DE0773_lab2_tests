@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +23,9 @@ import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.*;
 /**
 * Base URL: https://magento.softwaretestingboard.com/
  * 
- * Feature 1: Register new unique customer
- *  Task 1: Verify that the customer is registered successfully, if a customer
- *         with the same e-mail does not exist.
- * 
- *  Task 2: Verify the error message if a customer with the same e-mail already
- *         exists.
+ * Feature 1: 
+ *  In case of success, the account page should containt the user’s first name,
+ *  last name in the proper format and e-mail address.
  * @author colt
  */
 public class LoginLogoutTest {
@@ -55,7 +53,11 @@ public class LoginLogoutTest {
 		String password = "c40C4czRNn";
 		String firstName = "dgblc";
 		String lastName = "zgcqbq";
-		
+
+		testLogin(driver, firstName, lastName, email, password);
+	}
+
+	public static void testLogin(WebDriver driver, String firstName, String lastName, String email, String password) {
 		MagentoRegistrationForm regForm = new MagentoRegistrationForm(driver, 
 			RegistrationFormDOMVO.builder()
 				.url("https://magento.softwaretestingboard.com/customer/account/login/")
@@ -79,30 +81,17 @@ public class LoginLogoutTest {
 
 	@Test
     public void testLogout() {
-		String email = "gqebhqjn@example.com";
-		String password = "c40C4czRNn";
-		
+		testLogin(driver, "dgblc", "zgcqbq", "gqebhqjn@example.com", "c40C4czRNn");
 		MagentoRegistrationForm regForm = new MagentoRegistrationForm(driver, 
 			RegistrationFormDOMVO.builder()
-				.url("https://magento.softwaretestingboard.com/customer/account/login/")
-				.successUrl("https://magento.softwaretestingboard.com/customer/account/")
-				.email(new FormElement(By.id("email_address"), By.id("email_address-error"), email))
-				.password(new FormElement(By.id("password"), By.id("password-error"), password))
-				.submitButton(new FormElement(By.cssSelector("button.action.submit.primary"), null)) // Corrected selector
+				.url("https://magento.softwaretestingboard.com/customer/account/logout/")
+				.successUrl("https://magento.softwaretestingboard.com/customer/account/logoutSuccess/")
+				.loginButton(new FormElement(By.cssSelector("ul.header.links li.authorization-link a"), null)) 
+				.logoutButton(new FormElement(By.cssSelector("ul.header.links li.authorization-link > a"), null))
 				.build()
 		);
-
-		regForm.login();
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.and(
-				ExpectedConditions.urlMatches(regForm.getRegistrationFormVO().getSuccessUrl()),
-				ExpectedConditions.titleIs("My Account")
-			)
-		);
-
-		//String accountPageHeader = driver.findElement(By.cssSelector(".page-title")).getText();
-		//assertTrue(accountPageHeader.contains("My Account"), "User was not redirected} to the account page.");
+		regForm.findElements(false);
+		regForm.logout(null);
 	}
 
 }

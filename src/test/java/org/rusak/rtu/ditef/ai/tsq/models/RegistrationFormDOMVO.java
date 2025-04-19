@@ -31,6 +31,7 @@ public class RegistrationFormDOMVO {
     private FormElement dateOfBirth;
 
     private FormElement logoutButton;
+    private FormElement loginButton;
     private FormElement submitButton;
 
     @Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor
