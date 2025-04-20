@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>rtu.ditef.ai.tsq</name>
-    <!-- FIXME change it to the project's website -->
+    <!-- FIX-ME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
@@ -72,6 +72,14 @@
                         <systemPropertyVariables>
                             <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                         </systemPropertyVariables>
+                        <!-- Include both standard JUnit tests and Cucumber runners -->
+                        <includes>
+                            <include>**/Test*.java</include>
+                            <include>**/*Test.java</include>
+                            <include>**/*Tests.java</include>
+                            <include>**/*TestCase.java</include>
+                            <include>**/Run*.java</include>
+                        </includes>
                     </configuration>
                     <dependencies>
                         <dependency>
@@ -120,7 +128,6 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>${allure.plugin.version}</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
                     <resultsDirectory>allure-results</resultsDirectory>
@@ -200,13 +207,11 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-java-commons</artifactId>
-            <version>${allure.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber7-jvm</artifactId>
-            <version>${allure.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.cucumber</groupId>
@@ -232,7 +237,6 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>
-            <version>1.13.0-M1</version>
             <scope>test</scope>
         </dependency>
 
@@ -240,7 +244,6 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-engine</artifactId>
-            <version>1.13.0-M1</version>
             <scope>test</scope>
         </dependency>
 
@@ -263,14 +266,12 @@
             <artifactId>junit-bom</artifactId>
             <version>5.11.0</version>
             <type>pom</type>
-            <scope>import</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
-            <version>5.11.0</version>
         </dependency>
 
         <!-- Optionally: parameterized tests support -->
@@ -278,7 +279,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <scope>test</scope>
-            <version>5.11.0</version>
         </dependency>
 
         <dependency>

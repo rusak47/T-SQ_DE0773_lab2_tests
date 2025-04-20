@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +11,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rusak.rtu.ditef.ai.tsq.Utils;
-import org.rusak.rtu.ditef.ai.tsq.hw2.Feature2ShoppingTest;
 import org.rusak.rtu.ditef.ai.tsq.hw2.LoginLogoutTest;
 import org.rusak.rtu.ditef.ai.tsq.hw2.models.MagentoRegistrationForm;
+import org.rusak.rtu.ditef.ai.tsq.hw2.pages.CustomerHomePage;
+import org.rusak.rtu.ditef.ai.tsq.hw2.pages.HomePage;
+import org.rusak.rtu.ditef.ai.tsq.hw2.pages.MyAccountPage;
+import org.rusak.rtu.ditef.ai.tsq.hw2.pages.RegistrationPage;
+import org.rusak.rtu.ditef.ai.tsq.hw2.pages.SignInPage;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO.FormElement;
 
@@ -29,6 +32,12 @@ public class stepNewCustomerRegTest {
 	WebDriver driver;
 	MagentoRegistrationForm form;
 	
+	HomePage homepage;
+	RegistrationPage regpage;
+	MyAccountPage accountpage;
+	SignInPage signinpage;
+	CustomerHomePage customerhomepage;
+
 	@Before
 	public void testSetup() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",	"/usr/bin/chromedriver");
@@ -118,6 +127,7 @@ public class stepNewCustomerRegTest {
 		form.findElements(false); 
 	}
 
+	//@When("^User logs in with (.*) (.*)$")
 	@When("user {string} {string} logs in with {string} {string}")
 	public void user_logs_in_with_email_password(String firstname, String lastname, String email, String password) {
 	    form.getRegistrationFormVO().getEmail().setValue(email);
@@ -130,13 +140,16 @@ public class stepNewCustomerRegTest {
 
 	@And("user opens catalog of mens jackets")
 	public void user_opens_catalog_of_mens_jackets() {
-		// Add implementation for opening the catalog of men's jackets
+		this.customerhomepage = CustomerHomePage.create(driver);
+		
 		//focus on .navigation ul#ui-id-2>li+li+li a
-		driver.findElement(By.cssSelector(".navigation ul#ui-id-2>li+li+li a"));
+		//driver.findElement(By.cssSelector(".navigation ul#ui-id-2>li+li+li a"));
+		this.customerhomepage.accessCategory("MenJackets");
 	}
 
 	@Then("user is on catalogue of men jackets page")
 	public void user_is_on_catalogue_of_men_jackets_page() {
-		// Add implementation for verifying the user is on the men's jackets page
+		String url = driver.getCurrentUrl();
+		assertEquals("https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html", url);
 	}
 }

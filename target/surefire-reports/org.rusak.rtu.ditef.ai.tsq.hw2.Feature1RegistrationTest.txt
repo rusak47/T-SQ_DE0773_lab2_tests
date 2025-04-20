@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.rusak.rtu.ditef.ai.tsq.hw2.Feature1RegistrationTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.00 s -- in org.rusak.rtu.ditef.ai.tsq.hw2.Feature1RegistrationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.34 s -- in org.rusak.rtu.ditef.ai.tsq.hw2.Feature1RegistrationTest

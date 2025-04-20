@@ -1,24 +1,15 @@
 
 package org.rusak.rtu.ditef.ai.tsq.hw2;
 
-import java.time.Duration;
-
 import org.junit.jupiter.api.AfterEach;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.rusak.rtu.ditef.ai.tsq.Utils;
 import org.rusak.rtu.ditef.ai.tsq.hw2.models.MagentoRegistrationForm;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO.FormElement;
-import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.*;
 
 /**
 * Base URL: https://magento.softwaretestingboard.com/

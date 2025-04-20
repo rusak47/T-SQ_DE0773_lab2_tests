@@ -16,6 +16,7 @@ public class Utils {
 
     @Attachment(value = "Screenshot", type = "image/png")
     public static byte[] takeScreenshot(WebDriver driver) {
+        System.out.println("Util: Taking screenshot");
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
