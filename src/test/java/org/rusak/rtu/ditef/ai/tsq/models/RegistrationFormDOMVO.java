@@ -52,6 +52,10 @@ public class RegistrationFormDOMVO {
             this.required = true;
         }
 
+        public FormElement(String value) {
+            this(null, null, value, false);
+        }
+
         public String toString() {
             return "{value='" + value + "'}";
         }

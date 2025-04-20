@@ -57,7 +57,7 @@ public class LoginLogoutTest {
 		testLogin(driver, firstName, lastName, email, password);
 	}
 
-	public static void testLogin(WebDriver driver, String firstName, String lastName, String email, String password) {
+	public static MagentoRegistrationForm getLoginForm(WebDriver driver, String firstName, String lastName, String email, String password) {
 		MagentoRegistrationForm regForm = new MagentoRegistrationForm(driver, 
 			RegistrationFormDOMVO.builder()
 				.url("https://magento.softwaretestingboard.com/customer/account/login/")
@@ -65,18 +65,25 @@ public class LoginLogoutTest {
 				.email(new FormElement(
 					By.cssSelector(".fieldset.login .field.email input#email"),
 					By.id("email-error"), 
-					 email))
+					email))
 				.password(new FormElement(
 					By.cssSelector("form[id=\"login-form\"]:first-child > .fieldset.login > div.field.password input[id=\"pass\"]"), 
 					By.id("pass-error"), 
 					password))
 				.firstName(new FormElement(null,null, firstName, false))
 				.lastName(new FormElement(null,null, lastName, false))	
-				.submitButton(new FormElement(By.cssSelector("button.action.login.primary"), null)) // Corrected selector
+				.submitButton(new FormElement(By.cssSelector("button.action.login.primary"), null)) 
+				.loginButton(new FormElement(By.cssSelector("ul.header.links li.authorization-link a"), null)) 
+				.logoutButton(new FormElement(By.cssSelector("ul.header.links li.authorization-link > a"), null))
 				.build()
 		);
+		return regForm;
+	}
 
+	public static MagentoRegistrationForm testLogin(WebDriver driver, String firstName, String lastName, String email, String password) {
+		MagentoRegistrationForm regForm = getLoginForm(driver, firstName, lastName, email, password);
 		regForm.login();
+		return regForm;
 	}
 
 	@Test

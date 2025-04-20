@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.006 s -- in org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest

@@ -47,6 +47,6 @@ Feature: New customer registration
     Examples:
       |email                   |password      |firstname|lastname|
       | "gqebhqjn@example.com" | "c40C4czRNn" | "dgblc" | "zgcqbq" |
-      | "tbrjpkos@example.com" | "i#$E*I&_v[" | "" | "" |
-      | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "" | "" |
+      | "tbrjpkos@example.com" | "i#$E*I&_v[" | "msnxx" | "dgirpk" |
+      | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "pgucb" | "efrklv" |
       | "uxzxwogx@example.com" | "Xk3A}07YSy" | "mbuqj" | "hvepay" |

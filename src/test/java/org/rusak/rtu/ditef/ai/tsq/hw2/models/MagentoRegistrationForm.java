@@ -56,6 +56,11 @@ public class MagentoRegistrationForm {
         submitForm();
         verifyRegistrationSuccess();
     }
+
+    public void takeScreenshot(){
+		allure.Utils.takeScreenshot(this.driver);
+    }
+
     
     public void fillFormFields() {
         this.clear(); // Ensure the form is clean for recursive calls
@@ -71,6 +76,8 @@ public class MagentoRegistrationForm {
             this.firstNameWE.sendKeys(registrationFormVO.getFirstName().getValue());
             Thread.sleep(100);
             this.lastNameWE.sendKeys(registrationFormVO.getLastName().getValue());
+        
+            takeScreenshot();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new RuntimeException("Thread was interrupted during form input slowdown", e);
@@ -95,6 +102,7 @@ public class MagentoRegistrationForm {
         if (!(passStrength.equals("Strong") || passStrength.equals("Very Strong"))) {
             throw new WeakPasswordException("Password strength is: " + passStrength);
         }
+        takeScreenshot();
     }
 
     public void submitForm() {
@@ -128,6 +136,7 @@ public class MagentoRegistrationForm {
         } catch (org.openqa.selenium.TimeoutException | org.openqa.selenium.NoSuchElementException e) {
             // No error message found, continue with the registration process
         }
+        takeScreenshot();
     }
 
 
@@ -222,6 +231,7 @@ public class MagentoRegistrationForm {
         } catch (org.openqa.selenium.TimeoutException|org.openqa.selenium.NoSuchElementException e) {
             // No error message found, continue with the registration process
         }
+        takeScreenshot();
 
         //check that user is at account page
         accountPage(registrationFormVO.getSuccessUrl());
@@ -229,6 +239,8 @@ public class MagentoRegistrationForm {
 
     public void accountPage(String url){
         driver.get(url);
+        takeScreenshot();
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try{
             wait.until(ExpectedConditions.and(
@@ -266,6 +278,7 @@ public class MagentoRegistrationForm {
         WebElement actionMenuTrigger = driver.findElements(By.cssSelector("button.action.switch")).get(0);
         actionMenuTrigger.click();
 
+        takeScreenshot();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         WebElement logoutLink = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(registrationFormVO.getLogoutButton().getLocator())).get(0);
         logoutLink.click();

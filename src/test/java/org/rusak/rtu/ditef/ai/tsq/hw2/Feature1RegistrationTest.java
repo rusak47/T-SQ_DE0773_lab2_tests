@@ -14,10 +14,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rusak.rtu.ditef.ai.tsq.Utils;
+import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.DuplicateEmailException;
+import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.MissingRequiredFieldsException;
+import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.WeakPasswordException;
 import org.rusak.rtu.ditef.ai.tsq.hw2.models.MagentoRegistrationForm;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO.FormElement;
-import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.*;
+
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 
 /**
 * Base URL: https://magento.softwaretestingboard.com/
@@ -43,7 +52,10 @@ public class Feature1RegistrationTest {
 		driver.manage().window().maximize();
 	}
 
-	@AfterEach public void tearDown() {  driver.quit(); }
+	@AfterEach public void tearDown() {  
+		allure.Utils.takeScreenshot(driver);
+		driver.quit(); 
+	}
 
 	/**
 	 * FEATURE 1: Register new unique customer
@@ -68,6 +80,11 @@ public class Feature1RegistrationTest {
 	 *  | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "" | "" |
 	 *  | "uxzxwogx@example.com" | "Xk3A}07YSy" | "mbuqj" | "hvepay" |
 	 */
+	@Epic("Registration")
+	@Feature("1")
+	@Story("Successful registration of a customer with unique email")
+	@Owner("Vitaly X")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
     public void testSuccessfulRegistration() {
 		testSuccessfulRegistration(driver);
@@ -142,9 +159,14 @@ public class Feature1RegistrationTest {
 		System.out.println(regForm.getRegistrationFormVO());
 	}
 
+	@Epic("Registration")
+	@Feature("1")
+	@Story("New customer registration attempt with duplicate email")
+	@Owner("Vitaly X")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
     public void testDuplicateEmailRegistration(){
-		String password = Utils.randomPassword(10,4);
+		String password = Utils.randomPassword(14,4);
 		String email = "gqebhqjn@example.com";
 		
 		MagentoRegistrationForm regForm = new MagentoRegistrationForm(driver, 
@@ -172,6 +194,11 @@ public class Feature1RegistrationTest {
 		fail("Duplicate email registration test failed");		
 	}
 
+	@Epic("Registration")
+	@Feature("1")
+	@Story("New customer registration attempt with missing required fields")
+	@Owner("Vitaly X")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
     public void testMissingRequiredFieldsRegistration(){
 		String password = Utils.randomPassword(14,4);

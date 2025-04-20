@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rusak.rtu.ditef.ai.tsq.Utils;
-import org.rusak.rtu.ditef.ai.tsq.hw2.Feature1RegistrationTest;
+import org.rusak.rtu.ditef.ai.tsq.hw2.Feature2ShoppingTest;
 import org.rusak.rtu.ditef.ai.tsq.hw2.LoginLogoutTest;
 import org.rusak.rtu.ditef.ai.tsq.hw2.models.MagentoRegistrationForm;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO;
@@ -20,6 +20,7 @@ import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO.FormElement;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,9 +42,8 @@ public class stepNewCustomerRegTest {
 	@After public void tearDown() { driver.quit(); }
 
 	@Given("user opens magento shop home page and goes to registration page")
-	public void user_opens_magento_shop_home_page() {
+	public void user_opens_magento_shop_home_page_and_navigates_to_registration() {
 		driver.get("https://magento.softwaretestingboard.com/");
-		//Thread.sleep(100); //it is not recommended for use
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
 
 		String title = driver.getTitle();
@@ -96,8 +96,47 @@ public class stepNewCustomerRegTest {
 		form.logout(null);
 	}
 
+
+	@Given("user opens magento shop home page")
+	public void user_opens_magento_shop_home_page() {
+		driver.get("https://magento.softwaretestingboard.com/");
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+
+		String title = driver.getTitle();
+		System.out.println("Page title is: " + title);
+		assertEquals("Home Page", title);
+
+		WebElement loginLink = driver.findElements(By.cssSelector("ul.header.links li.authorization-link a")).get(0);
+        String loginUrl = loginLink.getDomAttribute("href");
+		loginLink.click();
+
+        // Wait for redirect process to complete and ensure the user is at registration page
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.urlContains("/customer/account/login/referer/"));
+
+		form = LoginLogoutTest.getLoginForm(driver, "", "", "", "");
+		form.findElements(false); 
+	}
+
 	@When("user {string} {string} logs in with {string} {string}")
 	public void user_logs_in_with_email_password(String firstname, String lastname, String email, String password) {
-	    LoginLogoutTest.testLogin(driver, firstname, lastname, email, password);
+	    form.getRegistrationFormVO().getEmail().setValue(email);
+		form.getRegistrationFormVO().getPassword().setValue(password);
+		form.getRegistrationFormVO().getFirstName().setValue(firstname);
+		form.getRegistrationFormVO().getLastName().setValue(lastname);
+		
+		form.login();
+	}
+
+	@And("user opens catalog of mens jackets")
+	public void user_opens_catalog_of_mens_jackets() {
+		// Add implementation for opening the catalog of men's jackets
+		//focus on .navigation ul#ui-id-2>li+li+li a
+		driver.findElement(By.cssSelector(".navigation ul#ui-id-2>li+li+li a"));
+	}
+
+	@Then("user is on catalogue of men jackets page")
+	public void user_is_on_catalogue_of_men_jackets_page() {
+		// Add implementation for verifying the user is on the men's jackets page
 	}
 }

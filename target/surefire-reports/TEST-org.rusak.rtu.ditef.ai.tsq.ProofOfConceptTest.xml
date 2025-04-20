@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest" time="0.006" tests="3" errors="0" skipped="3" failures="0">
+  <properties/>
+  <testcase name="test" classname="org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest" time="0.0">
+    <skipped message="class org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest is @Disabled"/>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testClicks" classname="org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest" time="0.0">
+    <skipped message="class org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest is @Disabled"/>
+  </testcase>
+  <testcase name="testFrames" classname="org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest" time="0.0">
+    <skipped message="class org.rusak.rtu.ditef.ai.tsq.ProofOfConceptTest is @Disabled"/>
+  </testcase>
+</testsuite>
