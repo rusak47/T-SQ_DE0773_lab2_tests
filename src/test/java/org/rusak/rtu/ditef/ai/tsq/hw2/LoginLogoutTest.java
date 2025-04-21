@@ -11,6 +11,8 @@ import org.rusak.rtu.ditef.ai.tsq.hw2.models.MagentoRegistrationForm;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO;
 import org.rusak.rtu.ditef.ai.tsq.models.RegistrationFormDOMVO.FormElement;
 
+import allure.Utils;
+
 /**
 * Base URL: https://magento.softwaretestingboard.com/
  * 
@@ -24,15 +26,9 @@ public class LoginLogoutTest {
 
 	@BeforeEach
 	public void testSetup() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",	"/usr/bin/chromedriver");
-		//WebDriverManager.chromedriver().setup(); //doesnt work
-		driver=new 
-			//ChromeDriver(); 
-			FirefoxDriver();
-		driver.manage().window().maximize();
+		driver = org.rusak.rtu.ditef.ai.tsq.Utils.setupDriverInstance(driver);
 	}
-
-	@AfterEach public void tearDown() {  driver.quit(); }
+	@AfterEach public void tearDown() {  org.rusak.rtu.ditef.ai.tsq.Utils.quitSharedDriver(driver); }
 
 	/**
 	 * 	| email | password | firstName | lastName |

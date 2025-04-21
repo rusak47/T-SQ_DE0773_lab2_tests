@@ -44,17 +44,10 @@ public class Feature1RegistrationTest {
 
 	@BeforeEach
 	public void testSetup() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",	"/usr/bin/chromedriver");
-		//WebDriverManager.chromedriver().setup(); //doesnt work
-		driver=new 
-			//ChromeDriver(); 
-			FirefoxDriver();
-		driver.manage().window().maximize();
+		driver = Utils.setupDriverInstance(driver);		
 	}
-
 	@AfterEach public void tearDown() {  
-		allure.Utils.takeScreenshot(driver);
-		driver.quit(); 
+		Utils.quitSharedDriver(driver);
 	}
 
 	/**

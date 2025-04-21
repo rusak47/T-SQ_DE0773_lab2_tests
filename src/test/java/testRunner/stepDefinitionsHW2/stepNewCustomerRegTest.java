@@ -40,15 +40,9 @@ public class stepNewCustomerRegTest {
 
 	@Before
 	public void testSetup() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",	"/usr/bin/chromedriver");
-		//WebDriverManager.chromedriver().setup(); //doesnt work
-		driver=new 
-			//ChromeDriver(); 
-			FirefoxDriver();
-		driver.manage().window().maximize();
+		driver = Utils.setupDriverInstance(driver);
 	}
-
-	@After public void tearDown() { driver.quit(); }
+	@After public void tearDown() { Utils.quitSharedDriver(driver); }
 
 	@Given("user opens magento shop home page and goes to registration page")
 	public void user_opens_magento_shop_home_page_and_navigates_to_registration() {
@@ -144,12 +138,13 @@ public class stepNewCustomerRegTest {
 		
 		//focus on .navigation ul#ui-id-2>li+li+li a
 		//driver.findElement(By.cssSelector(".navigation ul#ui-id-2>li+li+li a"));
-		this.customerhomepage.accessCategory("MenJackets");
+		this.customerhomepage.accessCategory("Men", "Tops", "Jackets");
 	}
 
 	@Then("user is on catalogue of men jackets page")
 	public void user_is_on_catalogue_of_men_jackets_page() {
 		String url = driver.getCurrentUrl();
 		assertEquals("https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html", url);
+		this.customerhomepage.checkIsCorrectCategoryPage("Men", "Tops", "Jackets");
 	}
 }

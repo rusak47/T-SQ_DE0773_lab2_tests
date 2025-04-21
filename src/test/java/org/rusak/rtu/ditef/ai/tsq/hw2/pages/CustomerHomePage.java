@@ -1,19 +1,18 @@
 package org.rusak.rtu.ditef.ai.tsq.hw2.pages;
 
-import java.time.Duration;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.rusak.rtu.ditef.ai.tsq.hw2.models.DelayIntf;
+import org.rusak.rtu.ditef.ai.tsq.hw2.models.TopNavigationIntf;
 
 import allure.ScreenshooterIntf;
 import lombok.Getter;
 
-public class CustomerHomePage implements ScreenshooterIntf{	
+public class CustomerHomePage implements TopNavigationIntf, ScreenshooterIntf, DelayIntf{	
 	public @Getter WebDriver driver;
 	
 	//driver.findElement(By.cssSelector(".panel.header  .action.switch")).click();
@@ -29,15 +28,6 @@ public class CustomerHomePage implements ScreenshooterIntf{
 	@FindBy (css = ".panel.header .logged-in")
 	WebElement txtWelcomeMessage;
 	
-	@FindBy (id = "ui-id-5")
-	WebElement mainCategory;
-	
-	@FindBy (id = "ui-id-17")
-	WebElement subCategory;
-	
-	@FindBy (id = "ui-id-19")
-	WebElement productCategory;
-	
 	protected CustomerHomePage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -52,41 +42,30 @@ public class CustomerHomePage implements ScreenshooterIntf{
 		this.dropDownMenu.click();
 		this.linkSignOut.click();
 		
-		return new HomePage(this.driver);		
+		return HomePage.create(this.driver);		
 	}
 	
-	public String getWelcomeMessage() {
-		
+	public String getWelcomeMessage() {		
 		return this.txtWelcomeMessage.getText();
 	}
 	
-	public void accessCategory(String categoryKeyword) {
-		switch(categoryKeyword) {
-			case "MenJackets" -> {
-							Actions actionbuilder = new Actions(driver);
-							WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-							
-							wait.until(ExpectedConditions.visibilityOf(this.mainCategory));
-							wait.until(ExpectedConditions.elementToBeClickable(this.mainCategory));
-							actionbuilder.moveToElement(this.mainCategory).perform();
-							
-							wait.until(ExpectedConditions.visibilityOf(this.subCategory));
-							wait.until(ExpectedConditions.elementToBeClickable(this.subCategory));
-							actionbuilder.moveToElement(this.subCategory).perform();
-							
-							wait.until(ExpectedConditions.visibilityOf(this.productCategory));
-							wait.until(ExpectedConditions.elementToBeClickable(this.productCategory));
-							actionbuilder.click(this.productCategory).perform();
+	public void checkIsOnCustomerHomePage() {
+		String title = driver.getTitle();
+		System.out.println("Page title is: " + title);
+		assertEquals("Home Page", title);
 
-							wait.until(ExpectedConditions.urlContains("/men/tops-men/jackets-men.html"));
-							
-						}
-			default -> {
-                }
-		}
-
-		//driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
-		takeScreenshot();
+		assertTrue(this.txtWelcomeMessage.isDisplayed());
 	}
 
+	@Override public void clearCart(){
+        TopNavigationIntf.super.clearCart();
+		waittoappear(1000);
+        takeScreenshot();
+    }
+
+	@Override public ProductsPage accessCategory(String root, String category, String subcategory) {
+		ProductsPage products = (ProductsPage) TopNavigationIntf.super.accessCategory(root, category, subcategory);
+		waittoappear(150);
+		return products;
+	}
 }

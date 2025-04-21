@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: testRunner.RunJUnitCucumberHW2ShoppingCartNavigation
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 124.1 s -- in testRunner.RunJUnitCucumberHW2ShoppingCartNavigation

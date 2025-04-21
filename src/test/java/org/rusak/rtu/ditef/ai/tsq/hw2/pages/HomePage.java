@@ -1,14 +1,16 @@
 package org.rusak.rtu.ditef.ai.tsq.hw2.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import allure.ScreenshooterIntf;
+import lombok.Getter;
 
-	WebDriver driver;
+public class HomePage implements ScreenshooterIntf {
+
+	public @Getter WebDriver driver;
 	public static String URL = "https://magento.softwaretestingboard.com/";
 	
 	//driver.findElement(By.cssSelector(".page-header a[href*=\"create\"]")).click();
@@ -21,21 +23,29 @@ public class HomePage {
 	@FindBy(css = ".page-header a[href*=\"login\"]")
 	WebElement linkSignin;
 	
-	public HomePage(WebDriver driver) {
+	private HomePage(WebDriver driver) {
 		this.driver = driver;
+	}
+	
+	public static HomePage create(WebDriver driver) {
+		HomePage page = new HomePage(driver);
 		driver.get(URL);
-		PageFactory.initElements(this.driver, this);
-	}
-	
-	public RegistrationPage createAnAccount() {
-		this.linkCreateAccount.click();
-		return PageFactory.initElements(this.driver, RegistrationPage.class);
+		PageFactory.initElements(driver, page);
 		
+		page.takeScreenshot();
+		return page;
 	}
 	
-	public SignInPage signIn() {
+	public RegistrationPage gotoCreateAccount() {
+		this.linkCreateAccount.click();
+		return 
+		//RegistrationPage.create(driver);		
+		PageFactory.initElements(this.driver, RegistrationPage.class);		
+	}
+	
+	public SignInPage gotoSignIn() {
 		this.linkSignin.click();
-		return PageFactory.initElements(this.driver, SignInPage.class);
+		return SignInPage.create(driver);
 	}
 	
 	

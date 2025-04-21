@@ -23,15 +23,9 @@ public class RegistrationTest {
 
 	@BeforeEach
 	public void testSetup() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",	"/usr/bin/chromedriver");
-		//WebDriverManager.chromedriver().setup(); //doesnt work
-		driver=new 
-			//ChromeDriver(); 
-			FirefoxDriver();
-		driver.manage().window().maximize();
+		driver = Utils.setupDriverInstance(driver);
 	}
-
-	@AfterEach public void tearDown() {  driver.quit(); }
+	@AfterEach public void tearDown() {Utils.quitSharedDriver(driver);}
 
     @Test
     public void testRegistration(){

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="io.cucumber.junit.platform.engine.CucumberTestEngine" time="36.227" tests="3" errors="0" skipped="1" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="io.cucumber.junit.platform.engine.CucumberTestEngine" time="124.072" tests="4" errors="0" skipped="1" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
-    <property name="webdriver.chrome.driver" value="/usr/bin/chromedriver"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/test-classes:/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/classes:/home/colt/.m2/repository/io/cucumber/messages/27.2.0/messages-27.2.0.jar:/home/colt/.m2/repository/io/cucumber/cucumber-java/7.21.1/cucumber-java-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-core/7.21.1/cucumber-core-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-gherkin/7.21.1/cucumber-gherkin-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.21.1/cucumber-gherkin-messages-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/testng-xml-formatter/0.3.1/testng-xml-formatter-0.3.1.jar:/home/colt/.m2/repository/io/cucumber/query/13.2.0/query-13.2.0.jar:/home/colt/.m2/repository/io/cucumber/tag-expressions/6.1.2/tag-expressions-6.1.2.jar:/home/colt/.m2/repository/io/cucumber/cucumber-expressions/18.0.1/cucumber-expressions-18.0.1.jar:/home/colt/.m2/repository/io/cucumber/datatable/7.21.1/datatable-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-plugin/7.21.1/cucumber-plugin-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/docstring/7.21.1/docstring-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/html-formatter/21.9.0/html-formatter-21.9.0.jar:/home/colt/.m2/repository/io/cucumber/junit-xml-formatter/0.7.1/junit-xml-formatter-0.7.1.jar:/home/colt/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/home/colt/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/colt/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.21.1/cucumber-junit-platform-engine-7.21.1.jar:/home/colt/.m2/repository/io/qameta/allure/allure-junit5/2.24.0/allure-junit5-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-junit-platform/2.24.0/allure-junit-platform-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-launcher/1.11.0/junit-platform-launcher-1.11.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/home/colt/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/colt/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.24.0/allure-cucumber7-jvm-2.24.0.jar:/home/colt/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite/1.11.0/junit-platform-suite-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-api/1.11.0/junit-platform-suite-api-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.11.0/junit-platform-suite-engine-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.11.0/junit-platform-suite-commons-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-engine/1.11.0/junit-platform-engine-1.11.0.jar:/home/colt/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-java/4.29.0/selenium-java-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-api/4.29.0/selenium-api-4.29.0.jar:/home/colt/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.29.0/selenium-chrome-driver-4.29.0.jar:/home/colt/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.29.0/selenium-chromium-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-json/4.29.0/selenium-json-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.29.0/selenium-manager-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v131/4.29.0/selenium-devtools-v131-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v132/4.29.0/selenium-devtools-v132-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.29.0/selenium-devtools-v133-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.29.0/selenium-devtools-v85-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.29.0/selenium-edge-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.29.0/selenium-firefox-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-http/4.29.0/selenium-http-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.29.0/selenium-ie-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.29.0/selenium-remote-driver-4.29.0.jar:/home/colt/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar:/home/colt/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/colt/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/colt/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/colt/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/colt/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/colt/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-api/1.46.0/opentelemetry-api-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-context/1.46.0/opentelemetry-context-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.46.0/opentelemetry-exporter-logging-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.46.0/opentelemetry-sdk-common-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.46.0/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.46.0/opentelemetry-sdk-extension-autoconfigure-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.46.0-alpha/opentelemetry-api-incubator-1.46.0-alpha.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.46.0/opentelemetry-sdk-trace-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.46.0/opentelemetry-sdk-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.46.0/opentelemetry-sdk-metrics-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.46.0/opentelemetry-sdk-logs-1.46.0.jar:/home/colt/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-os/4.29.0/selenium-os-4.29.0.jar:/home/colt/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.29.0/selenium-safari-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-support/4.29.0/selenium-support-4.29.0.jar:/home/colt/.m2/repository/io/github/bonigarcia/webdrivermanager/5.9.3/webdrivermanager-5.9.3.jar:/home/colt/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/home/colt/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java/3.4.1/docker-java-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-core/3.4.1/docker-java-core-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-api/3.4.1/docker-java-api-3.4.1.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/home/colt/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.4.1/docker-java-transport-httpclient5-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-transport/3.4.1/docker-java-transport-3.4.1.jar:/home/colt/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/colt/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/colt/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/colt/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/colt/.m2/repository/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar:/home/colt/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/home/colt/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/home/colt/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/home/colt/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/home/colt/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/home/colt/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:/home/colt/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:"/>
     <property name="java.vm.vendor" value="Arch Linux"/>
@@ -14,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-24-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire/surefirebooter-20250420150851321_3.jar /home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire 2025-04-20T15-08-51_254-jvmRun1 surefire-20250420150851321_1tmp surefire_0-20250420150851321_2tmp"/>
+    <property name="sun.java.command" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire/surefirebooter-20250421133140656_3.jar /home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire 2025-04-21T13-31-40_482-jvmRun1 surefire-20250421133140656_1tmp surefire_0-20250421133140656_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/test-classes:/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/classes:/home/colt/.m2/repository/io/cucumber/messages/27.2.0/messages-27.2.0.jar:/home/colt/.m2/repository/io/cucumber/cucumber-java/7.21.1/cucumber-java-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-core/7.21.1/cucumber-core-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-gherkin/7.21.1/cucumber-gherkin-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.21.1/cucumber-gherkin-messages-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/testng-xml-formatter/0.3.1/testng-xml-formatter-0.3.1.jar:/home/colt/.m2/repository/io/cucumber/query/13.2.0/query-13.2.0.jar:/home/colt/.m2/repository/io/cucumber/tag-expressions/6.1.2/tag-expressions-6.1.2.jar:/home/colt/.m2/repository/io/cucumber/cucumber-expressions/18.0.1/cucumber-expressions-18.0.1.jar:/home/colt/.m2/repository/io/cucumber/datatable/7.21.1/datatable-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/cucumber-plugin/7.21.1/cucumber-plugin-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/docstring/7.21.1/docstring-7.21.1.jar:/home/colt/.m2/repository/io/cucumber/html-formatter/21.9.0/html-formatter-21.9.0.jar:/home/colt/.m2/repository/io/cucumber/junit-xml-formatter/0.7.1/junit-xml-formatter-0.7.1.jar:/home/colt/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/home/colt/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/colt/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.21.1/cucumber-junit-platform-engine-7.21.1.jar:/home/colt/.m2/repository/io/qameta/allure/allure-junit5/2.24.0/allure-junit5-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-junit-platform/2.24.0/allure-junit-platform-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-launcher/1.11.0/junit-platform-launcher-1.11.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/home/colt/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/colt/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/home/colt/.m2/repository/io/qameta/allure/allure-cucumber7-jvm/2.24.0/allure-cucumber7-jvm-2.24.0.jar:/home/colt/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite/1.11.0/junit-platform-suite-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-api/1.11.0/junit-platform-suite-api-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.11.0/junit-platform-suite-engine-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.11.0/junit-platform-suite-commons-1.11.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-engine/1.11.0/junit-platform-engine-1.11.0.jar:/home/colt/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/colt/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-java/4.29.0/selenium-java-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-api/4.29.0/selenium-api-4.29.0.jar:/home/colt/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.29.0/selenium-chrome-driver-4.29.0.jar:/home/colt/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.29.0/selenium-chromium-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-json/4.29.0/selenium-json-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.29.0/selenium-manager-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v131/4.29.0/selenium-devtools-v131-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v132/4.29.0/selenium-devtools-v132-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.29.0/selenium-devtools-v133-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.29.0/selenium-devtools-v85-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.29.0/selenium-edge-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.29.0/selenium-firefox-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-http/4.29.0/selenium-http-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.29.0/selenium-ie-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.29.0/selenium-remote-driver-4.29.0.jar:/home/colt/.m2/repository/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar:/home/colt/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/colt/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/colt/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/colt/.m2/repository/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar:/home/colt/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/home/colt/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-api/1.46.0/opentelemetry-api-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-context/1.46.0/opentelemetry-context-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.46.0/opentelemetry-exporter-logging-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.46.0/opentelemetry-sdk-common-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.46.0/opentelemetry-sdk-extension-autoconfigure-spi-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.46.0/opentelemetry-sdk-extension-autoconfigure-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.46.0-alpha/opentelemetry-api-incubator-1.46.0-alpha.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.46.0/opentelemetry-sdk-trace-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.46.0/opentelemetry-sdk-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.46.0/opentelemetry-sdk-metrics-1.46.0.jar:/home/colt/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.46.0/opentelemetry-sdk-logs-1.46.0.jar:/home/colt/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-os/4.29.0/selenium-os-4.29.0.jar:/home/colt/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.29.0/selenium-safari-driver-4.29.0.jar:/home/colt/.m2/repository/org/seleniumhq/selenium/selenium-support/4.29.0/selenium-support-4.29.0.jar:/home/colt/.m2/repository/io/github/bonigarcia/webdrivermanager/5.9.3/webdrivermanager-5.9.3.jar:/home/colt/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/home/colt/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java/3.4.1/docker-java-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-core/3.4.1/docker-java-core-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-api/3.4.1/docker-java-api-3.4.1.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.3/jackson-annotations-2.10.3.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.3/jackson-databind-2.10.3.jar:/home/colt/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.3/jackson-core-2.10.3.jar:/home/colt/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-transport-httpclient5/3.4.1/docker-java-transport-httpclient5-3.4.1.jar:/home/colt/.m2/repository/com/github/docker-java/docker-java-transport/3.4.1/docker-java-transport-3.4.1.jar:/home/colt/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/home/colt/.m2/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar:/home/colt/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/home/colt/.m2/repository/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar:/home/colt/.m2/repository/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar:/home/colt/.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar:/home/colt/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/home/colt/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/home/colt/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/home/colt/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/home/colt/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:/home/colt/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:"/>
     <property name="allure.results.directory" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/allure-results"/>
@@ -30,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire/surefirebooter-20250420150851321_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq/target/surefire/surefirebooter-20250421133140656_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.1"/>
     <property name="user.name" value="colt"/>
@@ -46,6 +45,7 @@
     <property name="java.version" value="24.0.1"/>
     <property name="user.dir" value="/home/lxc_media/lxc-messangers/#COLT/#RTU/Testing and Software Quality(1), DE0773/unit_test_project/rtu.ditef.ai.tsq"/>
     <property name="os.arch" value="amd64"/>
+    <property name="webdriver.gecko.driver" value="/home/colt/.cache/selenium/geckodriver/linux64/0.36.0/geckodriver"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -56,12 +56,31 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="new customer successful registration" classname="New customer registration" time="0.0">
-    <skipped message="&apos;cucumber.filter.tags=@tag2&apos; did not match this scenario"/>
+  <testcase name="new customer successful registration" classname="New customer registration" time="29.72">
+    <system-out><![CDATA[
+@tag @tag1
+Scenario: new customer successful registration                          &amp#27;[90m# src/test/java/featuresHW2/NewCustomerRegistration.feature:34&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
+Page title is: Home Page
+Finding elements at: https://magento.softwaretestingboard.com/customer/account/create/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page and goes to registration page&amp#27;[0m &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_opens_magento_shop_home_page_and_navigates_to_registration()&amp#27;[0m
+Util: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser register with valid email&amp#27;[0m                                   &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_register_with_valid_email()&amp#27;[0m
+Util: Taking screenshot
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser is registered succesfully&amp#27;[0m                                   &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_is_registered_succesfully()&amp#27;[0m
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser logs out&amp#27;[0m                                                     &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_logs_out()&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
+]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Apr 20, 2025 3:08:52 PM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
+Apr 21, 2025 1:31:42 PM io.cucumber.junit.platform.engine.DiscoverySelectorResolver warnWhenCucumberFeaturesPropertyIsUsed
 WARNING: Discovering tests using the cucumber.features property. Other discovery selectors are ignored!
 
 This is a work around for the limited JUnit 5 support in Maven and Gradle. Please request/upvote/sponsor/ect better support for JUnit 5 discovery selectors. For details see: https://github.com/cucumber/cucumber-jvm/pull/2498
@@ -69,10 +88,13 @@ This is a work around for the limited JUnit 5 support in Maven and Gradle. Pleas
 If you are using the JUnit 5 Suite Engine, Platform Launcher API or Console Launcher you should not use this property. Please consult the JUnit 5 documentation on test selection.
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="18.349">
+  <testcase name="Example #1.1" classname="Examples" time="21.446">
     <system-out><![CDATA[
 @tag @tag2
 Scenario Outline: customer login                                              &amp#27;[90m# src/test/java/featuresHW2/NewCustomerRegistration.feature:49&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
 Page title is: Home Page
 Finding elements at: https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page&amp#27;[0m                                     &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_opens_magento_shop_home_page()&amp#27;[0m
@@ -83,13 +105,207 @@ Util: Taking screenshot
 ScreenshooterIntf: Taking screenshot
 Util: Taking screenshot
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser opens catalog of mens jackets&amp#27;[0m                                      &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_opens_catalog_of_mens_jackets()&amp#27;[0m
+Page title is: Jackets - Tops - Men
+Page URL is: https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser is on catalogue of men jackets page&amp#27;[0m                               &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_is_on_catalogue_of_men_jackets_page()&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="17.781">
+  <testcase name="Example #1.1" classname="Examples" time="0.0">
+    <skipped message="&apos;cucumber.filter.tags=not ( @tagtest )&apos; did not match this scenario"/>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="37.868">
+    <system-out><![CDATA[
+@tag @tag1
+Scenario Outline: sort products by price in descending order and verify the highest price &amp#27;[90m# src/test/java/featuresHW2/ShoppingCartNavigation.feature:65&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Customer Login
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page and navigates to login page&amp#27;[0m                     &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userOpensMagentoShopHomePage()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Home Page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mexisting user &amp#27;[0m&amp#27;[32m&amp#27;[1m"dgblc"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"zgcqbq"&amp#27;[0m&amp#27;[32m logs in with &amp#27;[0m&amp#27;[32m&amp#27;[1m"gqebhqjn@example.com"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"c40C4czRNn"&amp#27;[0m    &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userLogsIn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Cart items count: 2
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mempty cart&amp#27;[0m                                                                          &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.emptyCart()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Jackets - Tops - Men
+Page URL is: https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser navigates to another &amp#27;[0m&amp#27;[32m&amp#27;[1m"Men"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tops"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jackets"&amp#27;[0m&amp#27;[32m category&amp#27;[0m                           &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userNavigatesToAnotherCategory(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Sorting direction: Set Ascending Direction
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Sorting by: Price
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser sorts products by price in descending order&amp#27;[0m                                    &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userSortsProductsByPriceInDescendingOrder()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe first product in the list has the highest price in the category&amp#27;[0m                &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.theFirstProductInTheListHasTheHighestPriceInTheCategory()&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="32.965">
+    <system-out><![CDATA[
+@tag @tag2
+Scenario Outline: sort products by price in ascending order and search for a product   &amp#27;[90m# src/test/java/featuresHW2/ShoppingCartNavigation.feature:78&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Customer Login
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page and navigates to login page&amp#27;[0m                  &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userOpensMagentoShopHomePage()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Home Page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mexisting user &amp#27;[0m&amp#27;[32m&amp#27;[1m"dgblc"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"zgcqbq"&amp#27;[0m&amp#27;[32m logs in with &amp#27;[0m&amp#27;[32m&amp#27;[1m"gqebhqjn@example.com"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"c40C4czRNn"&amp#27;[0m &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userLogsIn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Cart is already empty
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mempty cart&amp#27;[0m                                                                       &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.emptyCart()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Jackets - Tops - Men
+Page URL is: https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser navigates to another &amp#27;[0m&amp#27;[32m&amp#27;[1m"Men"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tops"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jackets"&amp#27;[0m&amp#27;[32m category&amp#27;[0m                        &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userNavigatesToAnotherCategory(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Already sorted in Ascending order
+Sorting by: Price
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser sorts products by price in ascending order&amp#27;[0m                                  &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userSortsProductsByPriceInAscendingOrder()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe first product in the list has the minimal price in the category&amp#27;[0m             &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.theFirstProductInTheListHasTheMinimalPriceInTheCategory()&amp#27;[0m
+Page title is: Search results for: 'heat'
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser searches for a product by its full or partial title &amp#27;[0m&amp#27;[32m&amp#27;[1m"heat"&amp#27;[0m                 &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userSearchesForAProductByItsFullOrPartialTitle(java.lang.String)&amp#27;[0m
+Product titles: 12 limit check to TOP3
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m&amp#27;[32m product found contains the text &amp#27;[0m&amp#27;[32m&amp#27;[1m"heat"&amp#27;[0m                                    &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.theProductFoundContainsTheText(int,java.lang.String)&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="53.203">
+    <system-out><![CDATA[
+@tag @tag3
+Scenario Outline: Add products to the cart and verify cart updates                         &amp#27;[90m# src/test/java/featuresHW2/ShoppingCartNavigation.feature:93&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Customer Login
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page and navigates to login page&amp#27;[0m                      &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userOpensMagentoShopHomePage()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Home Page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mexisting user &amp#27;[0m&amp#27;[32m&amp#27;[1m"dgblc"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"zgcqbq"&amp#27;[0m&amp#27;[32m logs in with &amp#27;[0m&amp#27;[32m&amp#27;[1m"gqebhqjn@example.com"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"c40C4czRNn"&amp#27;[0m     &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userLogsIn(java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Cart is already empty
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mempty cart&amp#27;[0m                                                                           &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.emptyCart()&amp#27;[0m
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Page title is: Jackets - Tops - Men
+Page URL is: https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser navigates to another &amp#27;[0m&amp#27;[32m&amp#27;[1m"Men"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tops"&amp#27;[0m&amp#27;[32m &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jackets"&amp#27;[0m&amp#27;[32m category&amp#27;[0m                            &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userNavigatesToAnotherCategory(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+Sorting direction: Set Ascending Direction
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Sorting by: Price
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+scrolled to product details: Lando Gym Jacket
+Rating:
+67%
+3 Reviews
+As low as $99.00
+XS
+S
+M
+L
+XL
+Add to Cart
+ADD TO WISH LIST
+ADD TO COMPARE
+Focused on btn: Add to Cart
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser adds the product with the maximum price to the cart&amp#27;[0m                             &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userAddsTheProductWithTheMaximumPriceToTheCart()&amp#27;[0m
+Sorting direction: Set Descending Direction
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+Already sorted by Price
+scrolled to product details: Beaumont Summit Kit
+Rating:
+90%
+2 Reviews
+As low as $42.00
+XS
+S
+M
+L
+XL
+Add to Cart
+ADD TO WISH LIST
+ADD TO COMPARE
+Focused on btn: Add to Cart
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser adds the product with the minimal price to the cart&amp#27;[0m                             &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userAddsTheProductWithTheMinimalPriceToTheCart()&amp#27;[0m
+Page title is: Search results for: 'Wayfarer'
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32muser searches for a product by its full or partial title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Wayfarer"&amp#27;[0m                 &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userSearchesForAProductByItsFullOrPartialTitle(java.lang.String)&amp#27;[0m
+Product titles: 1 limit check to TOP1
+scrolled to product details: Wayfarer Messenger Bag
+Rating:
+67%
+3 Reviews
+$45.00
+Add to Cart
+ADD TO WISH LIST
+ADD TO COMPARE
+Focused on btn: Add to Cart
+Product does not have attribute: size
+Product does not have attribute: color
+ScreenshooterIntf: Taking screenshot
+Util: Taking screenshot
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser adds the found product &amp#27;[0m&amp#27;[32m&amp#27;[1m"Wayfarer"&amp#27;[0m&amp#27;[32m to the cart&amp#27;[0m                                   &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.userAddsTheFoundProductToTheCart(java.lang.String)&amp#27;[0m
+Item title: Wayfarer Messenger Bag, price: 45.0
+Item title: Beaumont Summit Kit, price: 42.0
+Item title: Wayfarer Messenger Bag, price: 45.0
+Item title: Beaumont Summit Kit, price: 42.0
+Item title: Lando Gym Jacket, price: 99.0
+Item title: Wayfarer Messenger Bag, price: 45.0
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe cart is updated correctly with the added products by title, quantity, and price&amp#27;[0m &amp#27;[90m# testRunner.stepDefinitionsHW2.stepShoppingCartNavigation.theCartIsUpdatedCorrectlyWithTheAddedProductsByTitleQuantityAndPrice()&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="20.206">
     <system-out><![CDATA[
 @tag @tag2
 Scenario Outline: customer login                                              &amp#27;[90m# src/test/java/featuresHW2/NewCustomerRegistration.feature:50&amp#27;[0m
+Creating new Firefox driver instance
+Number of open windows: 1
+Reusing existing shared driver. Number of open windows: 1
 Page title is: Home Page
 Finding elements at: https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32muser opens magento shop home page&amp#27;[0m                                     &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_opens_magento_shop_home_page()&amp#27;[0m
@@ -100,7 +316,12 @@ Util: Taking screenshot
 ScreenshooterIntf: Taking screenshot
 Util: Taking screenshot
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32muser opens catalog of mens jackets&amp#27;[0m                                      &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_opens_catalog_of_mens_jackets()&amp#27;[0m
+Page title is: Jackets - Tops - Men
+Page URL is: https://magento.softwaretestingboard.com/men/tops-men/jackets-men.html
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32muser is on catalogue of men jackets page&amp#27;[0m                               &amp#27;[90m# testRunner.stepDefinitionsHW2.stepNewCustomerRegTest.user_is_on_catalogue_of_men_jackets_page()&amp#27;[0m
+Quitting shared driver
+Quitting provided driver
+Quitting provided driver
 ]]></system-out>
   </testcase>
 </testsuite>

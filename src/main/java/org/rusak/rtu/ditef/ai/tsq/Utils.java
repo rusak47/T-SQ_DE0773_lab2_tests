@@ -3,10 +3,59 @@ package org.rusak.rtu.ditef.ai.tsq;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Utils {
+
+	// FIXME BUG a workaround for doubled window call by @BeforeEach
+	private static WebDriver sharedDriver = null;
+
+	public static WebDriver setupDriverInstance(WebDriver driver) {
+		// If a driver is passed in, use it
+		if(driver != null) { 
+			System.out.println("Using provided driver instance. Number of open windows: " + driver.getWindowHandles().size());
+			return driver; 
+		}
+		
+		// If we already have a shared driver, reuse it
+		if(sharedDriver != null) {
+			System.out.println("Reusing existing shared driver. Number of open windows: " + sharedDriver.getWindowHandles().size());
+			return sharedDriver;
+		}
+
+		// Create a new driver instance
+		System.out.println("Creating new Firefox driver instance");
+		WebDriverManager.firefoxdriver().setup();
+		
+		FirefoxOptions options = new FirefoxOptions();
+		//options.addArguments("--headless");
+		
+		sharedDriver = new FirefoxDriver(options);
+		System.out.println("Number of open windows: " + sharedDriver.getWindowHandles().size());
+		sharedDriver.manage().window().maximize();
+		
+		return sharedDriver;
+	}
+
+	// Add a method to quit the shared driver when tests are complete
+	public static void quitSharedDriver(WebDriver driver) {
+		if(sharedDriver != null) {
+			System.out.println("Quitting shared driver");
+			sharedDriver.quit();
+			sharedDriver = null;
+		}
+		if(driver != null) {
+			System.out.println("Quitting provided driver");
+			driver.quit();
+		}
+	}
 
 	private static String shuffleString(String input) {
 		List<Character> characters = new ArrayList<>();

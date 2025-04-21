@@ -28,53 +28,67 @@
 @tag
 Feature: Log in a customer and verify products in the cart
   description about scenarious and user stories
+  
+Background:
+    Given user opens magento shop home page and navigates to login page
+    When existing user "dgblc" "zgcqbq" logs in with "gqebhqjn@example.com" "c40C4czRNn"
+    And empty cart
+
+  @tagtest
+  Scenario Outline: Testing implemented steps
+    And user navigates to another <root> <product> <subproduct> category
+  #  And user sorts products by price in descending order
+  #  Then the first product in the list has the highest price in the category
+    And user adds the product with the minimal price to the cart
+    And user adds the product with the maximum price to the cart
+  #ok  And user sorts products by price in ascending order
+  #ok  Then the first product in the list has the minimal price in the category
+  #ok  When user searches for a product by its full or partial title <searchText>
+  #ok  Then the <top> product found contains the text <searchText>
+    When user searches for a product by its full or partial title <searchText>
+    And user adds the found product <searchText> to the cart
+    Then the cart is updated correctly with the added products by title, quantity, and price
+
+    Examples:
+      |root|product       |subproduct|top|searchText|
+      | "Men" | "Tops"    | "Jackets" | 3 | "Wayfarer" |
+    #  | "Men" | "Bottoms" | "Shorts" | 4 | "gym" |
 
   @tag1
-  Scenario: sort products by price in descending order and verify the highest price
-    Given user opens magento shop home page
-    When user <firstname> <lastname> logs in with <email> <password>
-    And user navigates to another category
+  Scenario Outline: sort products by price in descending order and verify the highest price
+    And user navigates to another <root> <product> <subproduct> category
     And user sorts products by price in descending order
     Then the first product in the list has the highest price in the category
 
     Examples:
-      |email                   |password      |firstname|lastname|
-      | "gqebhqjn@example.com" | "c40C4czRNn" | "dgblc" | "zgcqbq" |
-      | "tbrjpkos@example.com" | "i#$E*I&_v[" | "msnxx" | "dgirpk" |
-      | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "pgucb" | "efrklv" |
-      | "uxzxwogx@example.com" | "Xk3A}07YSy" | "mbuqj" | "hvepay" |
+      |root|product       |subproduct|
+      | "Men" | "Tops"    | "Jackets" |
+  #    | "Men" | "Bottoms" | "Shorts" |
 
   @tag2
   Scenario Outline: sort products by price in ascending order and search for a product
-    Given user opens magento shop home page
-    When user <firstname> <lastname> logs in with <email> <password>
-    And user navigates to a category
+    And user navigates to another <root> <product> <subproduct> category
     And user sorts products by price in ascending order
     Then the first product in the list has the minimal price in the category
-    When user searches for a product by its full or partial title "<searchText>"
-    Then the product found contains the text "<searchText>"
+    When user searches for a product by its full or partial title <searchText>
+    Then the <top> product found contains the text <searchText>
 
     Examples:
-      |email                   |password      |firstname|lastname|searchText       |
-      | "gqebhqjn@example.com" | "c40C4czRNn" | "dgblc" | "zgcqbq" | "jacket"       |
-      | "tbrjpkos@example.com" | "i#$E*I&_v[" | "msnxx" | "dgirpk" | "shirt"        |
-      | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "pgucb" | "efrklv" | "pants"        |
-      | "uxzxwogx@example.com" | "Xk3A}07YSy" | "mbuqj" | "hvepay" | "sweater"      |
+      |root|product       |subproduct|top|searchText|
+      | "Men" | "Tops"    | "Jackets" | 3 | "heat" |
+    #  | "Men" | "Bottoms" | "Shorts" | 4 | "gym" |
+
 
   @tag3
-  Scenario: Add products to the cart and verify cart updates
-    Given user opens magento shop home page
-    When user <firstname> <lastname> logs in with <email> <password>
-    And user navigates to the third category
+  Scenario Outline: Add products to the cart and verify cart updates
+    And user navigates to another <root> <product> <subproduct> category
     And user adds the product with the maximum price to the cart
     And user adds the product with the minimal price to the cart
-    When user searches for a product by its full or partial title "<searchText>"
-    And user adds the found product to the cart
+    When user searches for a product by its full or partial title <searchText>
+    And user adds the found product <searchText> to the cart
     Then the cart is updated correctly with the added products by title, quantity, and price
 
     Examples:
-      |email                   |password      |firstname|lastname|searchText       |
-      | "gqebhqjn@example.com" | "c40C4czRNn" | "dgblc" | "zgcqbq" | "jacket"       |
-      | "tbrjpkos@example.com" | "i#$E*I&_v[" | "msnxx" | "dgirpk" | "shirt"        |
-      | "kyjzeqbz@example.com" | ":]sRsaf3o~" | "pgucb" | "efrklv" | "pants"        |
-      | "uxzxwogx@example.com" | "Xk3A}07YSy" | "mbuqj" | "hvepay" | "sweater"      |
+      |root|product       |subproduct|top|searchText|
+      | "Men" | "Tops"    | "Jackets" | 3 | "Wayfarer" |
+    #  | "Men" | "Bottoms" | "Shorts" | 4 | "Wayfarer" |

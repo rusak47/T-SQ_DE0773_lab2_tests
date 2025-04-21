@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.rusak.rtu.ditef.ai.tsq.hw2.exceptions.*;
@@ -66,17 +67,18 @@ public class MagentoRegistrationForm {
         this.clear(); // Ensure the form is clean for recursive calls
         
         try {
-            Thread.sleep(100); // Slow down input so that strength meter is triggered
-            this.passwordWE.sendKeys(registrationFormVO.getPassword().getValue());
+            Actions actions = new Actions(driver);
+
+            actions.moveToElement(this.passwordWE).click().sendKeys(registrationFormVO.getPassword().getValue()).perform();
             Thread.sleep(100);
-            this.emailWE.sendKeys(registrationFormVO.getEmail().getValue());
+            actions.moveToElement(this.emailWE).click().sendKeys(registrationFormVO.getEmail().getValue()).perform();
             Thread.sleep(100);
-            this.confirmPasswordWE.sendKeys(registrationFormVO.getPassword().getValue());
+            actions.moveToElement(this.confirmPasswordWE).click().sendKeys(registrationFormVO.getPassword().getValue()).perform();
             Thread.sleep(100);
-            this.firstNameWE.sendKeys(registrationFormVO.getFirstName().getValue());
+            actions.moveToElement(this.firstNameWE).click().sendKeys(registrationFormVO.getFirstName().getValue()).perform();
             Thread.sleep(100);
-            this.lastNameWE.sendKeys(registrationFormVO.getLastName().getValue());
-        
+            actions.moveToElement(this.lastNameWE).click().sendKeys(registrationFormVO.getLastName().getValue()).perform();
+            
             takeScreenshot();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
